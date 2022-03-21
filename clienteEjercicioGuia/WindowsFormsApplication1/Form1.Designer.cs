@@ -32,8 +32,9 @@
             this.nombre = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Victorias = new System.Windows.Forms.RadioButton();
             this.Ranking = new System.Windows.Forms.RadioButton();
+            this.Victorias = new System.Windows.Forms.RadioButton();
+            this.WinRate = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.WinRate);
             this.groupBox1.Controls.Add(this.Ranking);
             this.groupBox1.Controls.Add(this.Victorias);
             this.groupBox1.Controls.Add(this.label2);
@@ -79,10 +81,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Peticion";
             // 
+            // Ranking
+            // 
+            this.Ranking.AutoSize = true;
+            this.Ranking.Location = new System.Drawing.Point(116, 89);
+            this.Ranking.Name = "Ranking";
+            this.Ranking.Size = new System.Drawing.Size(178, 17);
+            this.Ranking.TabIndex = 10;
+            this.Ranking.TabStop = true;
+            this.Ranking.Text = "Dime el ranking de los jugadores";
+            this.Ranking.UseVisualStyleBackColor = true;
+            // 
             // Victorias
             // 
             this.Victorias.AutoSize = true;
-            this.Victorias.Location = new System.Drawing.Point(116, 77);
+            this.Victorias.Location = new System.Drawing.Point(116, 66);
             this.Victorias.Name = "Victorias";
             this.Victorias.Size = new System.Drawing.Size(172, 17);
             this.Victorias.TabIndex = 9;
@@ -90,16 +103,16 @@
             this.Victorias.Text = "Dime jugador con mas victorias";
             this.Victorias.UseVisualStyleBackColor = true;
             // 
-            // Ranking
+            // WinRate
             // 
-            this.Ranking.AutoSize = true;
-            this.Ranking.Location = new System.Drawing.Point(116, 109);
-            this.Ranking.Name = "Ranking";
-            this.Ranking.Size = new System.Drawing.Size(178, 17);
-            this.Ranking.TabIndex = 10;
-            this.Ranking.TabStop = true;
-            this.Ranking.Text = "Dime el ranking de los jugadores";
-            this.Ranking.UseVisualStyleBackColor = true;
+            this.WinRate.AutoSize = true;
+            this.WinRate.Location = new System.Drawing.Point(116, 112);
+            this.WinRate.Name = "WinRate";
+            this.WinRate.Size = new System.Drawing.Size(142, 17);
+            this.WinRate.TabIndex = 11;
+            this.WinRate.TabStop = true;
+            this.WinRate.Text = "Dime mi ratio de victorias";
+            this.WinRate.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -124,6 +137,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton Victorias;
         private System.Windows.Forms.RadioButton Ranking;
+        private System.Windows.Forms.RadioButton WinRate;
     }
 }
 

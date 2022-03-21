@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
 
                 }
 
-                else if (Ranking.Checked)
+                if (Ranking.Checked)
                 {
                     string mensaje = "2/" + nombre.Text;
                     // Enviamos al servidor el nombre tecleado
@@ -71,17 +71,19 @@ namespace WindowsFormsApplication1
                     server.Receive(msg2);
                     mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
                     MessageBox.Show("Éste es el ranking de los jugadores: " + mensaje);
+                }
+                else if (WinRate.Checked)
+                {
+                    string mensaje = "3/" + nombre.Text;
+                    // Enviamos al servidor el nombre tecleado
+                    byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                    server.Send(msg);
 
-
-
-
-
-
-
-
-
-
-
+                    //Recibimos la respuesta del servidor
+                    byte[] msg2 = new byte[80];
+                    server.Receive(msg2);
+                    mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+                    MessageBox.Show("El WinRate de "+nombre.Text+" es del:" + mensaje);
                 }
                 // Se terminó el servicio. 
                 // Nos desconectamos
@@ -106,8 +108,6 @@ namespace WindowsFormsApplication1
           
 
         }
-
-   
 
      
     }
